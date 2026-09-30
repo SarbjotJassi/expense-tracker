@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <style>
+      body{
+    background-color: #f5f1e8;
+    }
+
+        h1 {
+            margin: 20px 10px;
+            text-align: center;
+            font-weight: bold;
+                color: #234e3f;
+
+        }
+
+        .expenseTracker {
+        display: flex;
+        flex-direction: column;
+            text-align: center;
+            align-items: center;
+
+        }
+
+       #expenseName,
+#amount {
+    width: 300px;
+    height: 40px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin: 5px;
+    border: 1px solid #8ca89d;
+        background-color: white;
+
+}
+
+#total{
+    font-size: 20px;
+    font-weight: bolder;
+        color: #234e3f;
+
+}
+
+#addExpense,
+#clearAll{
+    height: 40px;
+        padding: 5px 10px;
+        font-size: 15px;
+        border-radius: 10px;
+        cursor: pointer;
+        margin: 10px 5px;
+        background-color: #2f6b57;
+    color: white;
+       border: none;
+
+}
+#addExpense:hover,
+#clearAll:hover{
+    background-color: #234e3f;
+
+}
+
+#error{
+    color: #c0392b;
+    font-size: 18px;
+    margin: 10px 5px;
+    padding: 5px 10px;
+}
+
+#expenseList{
+    font-size: 20px;
+                    color: #234e3f;
+
+}
+    </style>
+</head>
+
+<body>
+    <h1>Expense Tracker</h1>
+    <div class="expenseTracker"> 
+            <input type="text" id="expenseName" placeholder="Enter expense name">
+            <input type="number" id="amount" placeholder="Enter amount here">
+        <div id="expenseList"></div>
+        <p id="error"></p>
+        <p id="total">Total Expense: ₹0</p>
+        <div class="buttonList">
+        <button id="addExpense">Add Expenses</button>
+        <button id="clearAll">Clear All</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
